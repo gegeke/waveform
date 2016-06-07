@@ -1,7 +1,7 @@
 var wavesurfer = WaveSurfer.create({
 	container: '#waveform',
 	waveColor: 'red',
-	barWidth: 1,
+	// barWidth: 1,
 	height: 150,
 	minPxPerSec: 100
 });
