@@ -6,8 +6,22 @@
     <title>Waveform by gegeke</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="javascripts/respond.js"></script>
+    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- main wavesurfer.js lib -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.2/wavesurfer.min.js"></script>
+
+		<!-- wavesurfer.js microphone -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.1.2/plugin/wavesurfer.microphone.min.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,32 +32,23 @@
 
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/gegeke/waveform">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/gegeke/waveform/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/gegeke/waveform/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Waveform</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/gegeke">gegeke</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h3>
-<a id="this-page-is-for-the-waveform-test" class="anchor" href="#this-page-is-for-the-waveform-test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>THIS PAGE IS FOR THE WAVEFORM TEST</h3>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+      <div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-xs-push-3">
+					<div id="waveform"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<p align="center">
+						<button class="btn btn-primary btn-lg" onclick="microphone.start()">
+							Start the mic
+						</button>
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="js/main.js"></script>
     
   </body>
 </html>
