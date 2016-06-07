@@ -10,7 +10,7 @@ var microphone = Object.create(WaveSurfer.Microphone);
 
 microphone.init({
 	wavesurfer: wavesurfer,
-	bufferSize: 8192
+	bufferSize: 16384
 });
 
 microphone.on('deviceReady', function(stream) {
