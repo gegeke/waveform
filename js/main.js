@@ -1,4 +1,8 @@
-var wavesurfer = WaveSurfer.create({ container: '#waveform', waveColor: 'red' });
+var wavesurfer = WaveSurfer.create({
+	container: '#waveform',
+	waveColor: 'red',
+	barWidth: 5
+});
 
 var microphone = Object.create(WaveSurfer.Microphone);
 
